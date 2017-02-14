@@ -1,0 +1,17 @@
+<h1>Game#game</h1>
+<p>Find me in app/views/game/game.html.erb</p>
+
+
+
+<%= grid = generate_grid(9) %>
+
+
+<form action="/score" method="get">
+  <label for="question">What's your guess?</label>
+  <input type="text" id="question" name="query" placeholder="Guess?">
+  <input type="hidden" name="start_time" value="<%=Time.now%>">
+  <input type="hidden" name="grid" value="<%=grid%>">
+  <input type="submit" value="Go on!">
+</form>
+
+

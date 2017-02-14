@@ -1,0 +1,10 @@
+<h1>Game#score</h1>
+<p>Find me in app/views/game/score.html.erb</p>
+
+<%
+  translation = get_translation(@attempt)
+  time = (Time.now - @start_time.to_time).to_i
+%>
+
+<%=score_and_message(@attempt, translation, @grid, time)%>
+
